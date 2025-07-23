@@ -5,38 +5,28 @@
     <title>Online Movie Ticket Booking</title>
 </head>
 <body>
-
     <h1>Online Movie Ticket Booking</h1>
-
-    <!-- Movie Trailer using HTML5 Video -->
     <h2>Now Showing: The Fantastic Four: First Steps</h2>
     <video width="400" controls>
-        <source src="C:\Users\JEREMIAH\Downloads\The Fantastic Four First Steps.mp4" type="video/mp4">
+        <source src="The Fantastic Four First Steps .mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-
-    <!-- Movie Poster using Image -->
     <br><br>
     <img src="The Fantastic Four First Steps.jpg" alt="Movie Poster" width="200">
-
     <h2>Book Your Tickets</h2>
     <form action="/submit-booking" method="post">
         <label for="name">Full Name:</label><br>
         <input type="text" id="name" name="name" required><br><br>
-
         <label for="email">Email Address:</label><br>
         <input type="email" id="email" name="email" required><br><br>
-
         <label for="movie">Select Movie:</label><br>
         <select id="movie" name="movie">
             <option value="adventure">The Fantastic Four: First Steps</option>
             <option value="romance">Romantic Escape</option>
             <option value="sci-fi">Space Quest</option>
         </select><br><br>
-
         <label for="date">Select Date:</label><br>
         <input type="date" id="date" name="date" required><br><br>
-
         <label for="time">Select Show Time:</label><br>
         <input list="showtimes" name="time" id="time">
         <datalist id="showtimes">
@@ -46,29 +36,22 @@
             <option value="7:00 PM">
             <option value="10:00 PM">
         </datalist><br><br>
-
         <label for="seats">Number of Tickets:</label><br>
         <input type="number" id="seats" name="seats" min="1" max="10" required><br><br>
-
         <label for="seatType">Seat Type:</label><br>
         <input type="radio" id="regular" name="seatType" value="Regular" checked>
         <label for="regular">Regular</label><br>
         <input type="radio" id="premium" name="seatType" value="Premium">
         <label for="premium">Premium</label><br><br>
-
         <label for="comments">Additional Requests:</label><br>
         <textarea id="comments" name="comments" rows="4" cols="30"></textarea><br><br>
-
-        <!-- Optional Audio Preview -->
         <h3>Listen to Soundtrack Preview:</h3>
         <audio controls>
             <source src="The Fantastic Four First Steps Main Theme.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio><br><br>
-
         <input type="submit" value="Book Now">
         <input type="reset" value="Clear Form">
     </form>
-
 </body>
 </html>
