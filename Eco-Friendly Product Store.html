@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Friendly Product Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7f3;
+            color: #333;
+        }
+        header {
+            background: #39a570;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 1em 0 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5em 1em;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+        nav a.active, nav a:hover {
+            background: #236041;
+        }
+        main {
+            max-width: 900px;
+            margin: 2em auto;
+            padding: 1em;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+        }
+        section {
+            margin-bottom: 3em;
+        }
+        .products-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+        }
+        .product-item {
+            flex: 1 1 250px;
+            background: #e0f7e4;
+            padding: 1em;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .product-item img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .cta-btn {
+            display: inline-block;
+            margin: 1em 0;
+            padding: 0.8em 2em;
+            background: #39a570;
+            color: #fff;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .cta-btn:hover {
+            background: #267750;
+        }
+        footer {
+            background: #236041;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            width: 100%;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Eco-Friendly Product Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#products">Our Products</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <h2>Welcome to Your Sustainable Shopping Destination</h2>
+            <p>
+                At Eco-Friendly Product Store, our mission is to offer top-quality, environmentally responsible products that help you live a greener life.
+            </p>
+            <ul>
+                <li>Biodegradable packaging</li>
+                <li>Reusable household goods</li>
+                <li>Organic personal care items</li>
+                <li>Sustainable fashion and accessories</li>
+            </ul>
+            <img src="E:\lab\WT\Assignment\product.jpg" alt="Eco-Friendly Products" style="max-width:400px;">
+            <p>
+                Discover how small changes in your shopping habits can make a big impact on the planet.
+            </p>
+            <a href="#products" class="cta-btn">View Our Products</a>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products">
+            <h2>Featured Eco-Friendly Products</h2>
+            <div class="products-grid">
+                <div class="product-item">
+                    <img src="E:\lab\WT\Assignment\bamboo toothbrush.jpg" alt="Bamboo Toothbrush">
+                    <h3>Bamboo Toothbrush</h3>
+                    <p>Made from sustainable bamboo, 100% biodegradable handle.</p>
+                </div>
+                <div class="product-item">
+                    <img src="E:\lab\WT\Assignment\Reusable Shopping Bag.jpg" alt="Reusable Shopping Bag">
+                    <h3>Reusable Shopping Bag</h3>
+                    <p>Durable, washable, and made from recycled materials.</p>
+                </div>
+                <div class="product-item">
+                    <img src="E:\lab\WT\Assignment\Handmade Organic Soap.jpg" alt="Organic Soap">
+                    <h3>Handmade Organic Soap</h3>
+                    <p>No harsh chemicals, vegan-friendly, and compostable packaging.</p>
+                </div>
+                <!-- Add more products if needed -->
+            </div>
+
+            <h2>Why Choose Us?</h2>
+            <ol>
+                <li>Reduce plastic waste</li>
+                <li>Support ethical production</li>
+                <li>Promote a healthier lifestyle</li>
+            </ol>
+            <a href="#home" class="cta-btn">Back to Home</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Eco-Friendly Product Store | Design by [Jerry]</p>
+    </footer>
+</body>
+</html>
