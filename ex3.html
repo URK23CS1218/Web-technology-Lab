@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trendy Threads</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        /* Header */
+        
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+        .site-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .search-box {
+            padding: 8px 10px;
+            border-radius: 4px;
+            border: none;
+            font-size: 16px;
+        }
+        /* Banner */
+        
+        .banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* Welcome Section */
+        
+        .welcome {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+        
+        .welcome h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        /* Gallery */
+        
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            padding: 30px 20px;
+            background-color: #f1f1f1;
+        }
+        
+        .gallery-item {
+            width: 300px;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+            opacity: 0.95;
+        }
+        
+        .caption {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 8px;
+            text-align: center;
+            font-size: 18px;
+        }
+        /* Content Sections */
+        
+        .content-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 20px;
+            background-color: #fff;
+        }
+        
+        .content-section.reverse {
+            flex-direction: row-reverse;
+        }
+        
+        .content-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .content-text {
+            max-width: 500px;
+            padding: 20px;
+        }
+        
+        .content-text h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        /* Footer */
+        
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+        /* Responsive */
+        
+        @media (max-width: 768px) {
+            .gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+            .content-section {
+                flex-direction: column;
+            }
+            .content-section.reverse {
+                flex-direction: column;
+            }
+            .header-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1 class="site-title">Trendy Threads</h1>
+            <input type="text" placeholder="Search..." class="search-box" />
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <img src="banner.jpg" alt="Banner" />
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <h2>Welcome to Trendy Threads!</h2>
+        <p>Your one-stop shop for the latest fashion trends. Explore our collections curated with style, comfort, and affordability in mind.</p>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="gallery">
+        <div class="gallery-item" style="background-image: url('menswear.jpg');">
+            <div class="caption">Menswear</div>
+        </div>
+        <div class="gallery-item" style="background-image: url('womenswear.jpg');">
+            <div class="caption">Womenswear</div>
+        </div>
+        <div class="gallery-item" style="background-image: url('Accessories.jpg');">
+            <div class="caption">Accessories</div>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <section class="content-section">
+        <div class="content-image">
+            <img src="Summer.jpg" alt="Summer Collection" />
+        </div>
+        <div class="content-text">
+            <h3>Fresh Summer Collection</h3>
+            <p>Beat the heat in style with our exclusive summer collection. Lightweight fabrics, breezy silhouettes, and bold prints await!</p>
+        </div>
+    </section>
+
+    <section class="content-section reverse">
+        <div class="content-text">
+            <h3>Accessories to Match</h3>
+            <p>From statement necklaces to leather belts, find the perfect accessories to complete your look.</p>
+        </div>
+        <div class="content-image">
+            <img src="Accessories1.jpg" alt="Accessories" />
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Trendy Threads. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
