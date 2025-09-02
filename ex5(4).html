@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Order Bill</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff8f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            width: 380px;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #b3541e;
+        }
+        
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 6px;
+        }
+        
+        select,
+        input[type="number"],
+        input[type="checkbox"],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+        
+        button {
+            background: #b3541e;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        
+        button:hover {
+            background: #8c2f0b;
+        }
+        
+        #result {
+            margin-top: 15px;
+            padding: 15px;
+            background: #ffe0b2;
+            border-radius: 10px;
+            font-weight: bold;
+            color: #5a2806;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>🍰 Cake Order</h2>
+        <label for="cakeType">Select Cake:</label>
+        <select id="cakeType">
+      <option value="500">Chocolate Cake - ₹500</option>
+      <option value="400">Vanilla Cake - ₹400</option>
+      <option value="600">Red Velvet Cake - ₹600</option>
+      <option value="700">Black Forest Cake - ₹700</option>
+    </select>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" min="1" value="1">
+        <label>Add-ons:</label>
+        <input type="checkbox" id="candles" value="50"> Extra Candles (₹50)<br>
+        <input type="checkbox" id="cream" value="100"> Extra Cream (₹100)<br>
+        <input type="checkbox" id="choco" value="150"> Chocolate Chips (₹150)<br>
+        <button onclick="calculateBill()">Calculate Bill</button>
+        <div id="result">Total Bill: ₹0</div>
+    </div>
+    <script>
+        function calculateBill() {
+            let cakePrice = parseInt(document.getElementById("cakeType").value);
+            let quantity = parseInt(document.getElementById("quantity").value);
+            let total = cakePrice * quantity;
+            if (document.getElementById("candles").checked) {
+                total += parseInt(document.getElementById("candles").value);
+            }
+            if (document.getElementById("cream").checked) {
+                total += parseInt(document.getElementById("cream").value);
+            }
+            if (document.getElementById("choco").checked) {
+                total += parseInt(document.getElementById("choco").value);
+            }
+            document.getElementById("result").innerHTML = "Total Bill: ₹" + total;
+        }
+    </script>
+
+</body>
+
+</html>
